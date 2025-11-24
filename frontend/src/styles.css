@@ -682,6 +682,7 @@ tbody tr:hover td {
    Responsive
    ========== */
 
+/* Tablets y pantallas medianas */
 @media (max-width: 960px) {
   .login-layout {
     grid-template-columns: minmax(0, 1fr);
@@ -702,4 +703,80 @@ tbody tr:hover td {
   .main {
     min-height: auto;
   }
+
+  /* Ajustes extra para contenido y header */
+  .topbar {
+    padding: 0 14px;
+  }
+
+  .content-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* En la pantalla de login, las columnas de ejemplos pasan a una sola columna */
+  .demo-cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
+
+/* Móviles pequeños (teléfonos) */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 20px;
+    letter-spacing: 0.12em;
+  }
+
+  /* Tarjetas un poco más compactas */
+  .card {
+    padding: 16px 14px;
+    border-radius: 14px;
+  }
+
+  .login-layout {
+    gap: 16px;
+  }
+
+  .login-form-wrapper {
+    padding: 16px;
+  }
+
+  /* Topbar apilada para evitar que se corte en pantallas angostas */
+  .topbar {
+    padding: 8px 12px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .topbar-left,
+  .user-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Tablas: scroll horizontal en lugar de cortarse */
+  .table-wrapper {
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  .table-wrapper table {
+    min-width: 480px;
+    font-size: 11px;
+  }
+
+  /* Botones a ancho completo en móvil para ser más clicables */
+  .btn,
+  .btn.secondary,
+  .btn.secondary-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
